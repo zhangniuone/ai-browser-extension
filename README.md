@@ -1,90 +1,82 @@
-# 🦊 AI Browser Extension - 浏览器AI助手
+# AI Browser Extension - AI 浏览器插件
 
-> **集成到浏览器的AI助手 - 翻译、摘要、写作、搜索增强**
-> 💼 **浏览器AI助手 | 月收入可达 ¥350,000+ | ROI 600%+**
+> 浏览器扩展形式的AI助手，支持网页内容分析和智能操作
 
-## 💰 盈利模式
+## 📋 介绍
 
-| 功能 | 免费版 | 付费版 ¥19/月 |
-|------|--------|-------------|
-| 翻译功能 | 10次/天 | 无限次 |
-| 文本摘要 | 5次/天 | 无限次 |
-| 内容写作 | 3次/天 | 无限次 |
-| 搜索增强 | 基础 | 高级 |
-| 个性化 | ❌ | ✅ |
-| 多设备同步 | ❌ | ✅ |
+AI 浏览器插件 是一个基于 Productivity 场景的 AI 智能工具。
 
-**额外收入：**
-- **高级功能** - OCR识别、PDF处理
-- **企业版** - 团队协作、自定义模型
-- **API服务** - 开放给第三方集成
+### ✨ 核心功能
 
-## 🚀 商业价值
-
-### 投资回报率 (ROI)
-- **初期投入:** ¥100,000 (开发+推广)
-- **月运营成本:** ¥1,650-6,000
-- **月收入潜力:** ¥25,000-350,000+ (随用户增长)
-- **ROI:** 400%-800%+
-
-### 时间线收益预测
-| 阶段 | 月数 | 免费用户 | 付费用户 | 月收入 | 累计利润 |
-|------|------|----------|----------|--------|----------|
-| 启动期 | 1-3 | 10K | 100 | ¥3,000 | -¥80,000~+¥5,000 |
-| 成长期 | 4-6 | 50K | 1,000 | ¥25,000 | +¥10,000~+¥60,000 |
-| 成熟期 | 7-12 | 200K | 5,000 | ¥120,000 | +¥60,000~+¥400,000 |
-| 扩展期 | 12+ | 500K | 15K+ | ¥350,000+ | +¥400,000+ |
-
----
-
-## ✨ 功能特性
-
-### 核心功能
-- ✅ **网页翻译** - 智能翻译选中文本
-- ✅ **内容摘要** - 自动摘要长篇文章
-- ✅ **写作助手** - 智能补全、润色
-- ✅ **搜索增强** - 搜索结果AI分析
-- ✅ **语法检查** - 实时纠错
-- ✅ **OCR识别** - 截图文字提取
-- ✅ **PDF处理** - PDF内容分析
-
-### 浏览器支持
-- 🦊 Firefox
-- ☕ Chrome
-- 🌐 Edge
-- 🍎 Safari
-
-### AI模型支持
-- OpenAI GPT系列
-- Anthropic Claude
-- 月之暗面 Kimi
-- 通义千问
-
----
+- ✅ **网页内容摘要**
+- ✅ **智能翻译**
+- ✅ **内容提取**
+- ✅ **快速AI交互**
 
 ## 🚀 快速开始
 
-### 安装开发版
+### 环境要求
+- Python 3.11+
+- OpenAI API Key
 
-```bash
-git clone https://github.com/zhangniuone/ai-browser-extension.git
-cd ai-browser-extension
 
-# For Chrome
-1. Open chrome://extensions/
-2. Enable Developer mode
-3. Click "Load unpacked"
-4. Select this directory
+### Chrome 浏览器
+1. 访问 `chrome://extensions/`
+2. 开启「开发者模式」
+3. 点击「加载已解压的扩展程序」
+4. 选择 `dist` 目录
 
-# For Firefox
-1. Open about:debugging
-2. Click "This Firefox"
-3. Click "Load Temporary Add-on"
-4. Select manifest.json
+### Firefox 浏览器
+1. 访问 `about:debugging`
+2. 点击「此 Firefox」→「临时载入附加组件」
+3. 选择 `manifest.json` 文件
+
+
+## 📖 使用示例
+
+```python
+import requests
+
+API_URL = "http://localhost:8000/api/process"
+payload = {"input": "您的输入内容"}
+
+response = requests.post(API_URL, json=payload)
+result = response.json()
+print(result)
 ```
+
+## 📚 API 文档
+
+| 方法 | 路径 | 描述 |
+|------|------|------|
+| GET | `/` | 健康检查 |
+| POST | `/api/process` | 主要处理接口 |
+
+## 🚀 部署指南
+
+支持 Vercel、Railway、Render、Heroku、Docker 等平台部署。
+
+## 📁 项目结构
+
+```
+├── app.py              # 主应用入口
+├── requirements.txt    # Python 依赖
+├── Dockerfile          # Docker 配置
+├── .gitignore         # Git 忽略配置
+└── README.md          # 项目文档
+```
+
+## 🤝 贡献指南
+
+1. Fork 本项目
+2. 创建分支
+3. 提交更改
+4. 创建 Pull Request
+
+## 📄 许可证
+
+MIT License
 
 ---
 
-## 📄 License
-
-MIT License
+**Made with ❤️ by AI Team**
